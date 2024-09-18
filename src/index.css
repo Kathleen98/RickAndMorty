@@ -1,0 +1,23 @@
+a {
+  font-weight: 500;
+  color: #A594F9;
+  text-decoration: none;
+}
+a:hover {
+  color: #A594F9;
+  text-decoration: underline;
+}
+
+button:hover {
+  border: 2px solid #A594F9 !important;
+  background: linear-gradient(210deg, #d2e0fb, #dee5d4, #fef9d9, #d1e9f6) !important;
+  transition: background 0.9s ease, border-color 0.3s ease !important;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #A594F9 !important;
+}
+
+input:focus, textarea:focus{
+  border: 2px solid #A594F9 !important;
+}
