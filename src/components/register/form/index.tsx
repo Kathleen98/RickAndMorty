@@ -1,15 +1,27 @@
 import { BackgroundImage, Button, Flex, TextInput } from "@mantine/core";
-import z from 'zod';
+import z from "zod";
+import { useForm } from "react-hook-form";
 
 const schemaName = z.object({
-    userName: z.string()
+  userName: z.string(),
 });
 
-type schemaName = z.infer<typeof schemaName>
+type schemaName = z.infer<typeof schemaName>;
 
 const FormSignUp = () => {
+  const { register, handleSubmit, reset } = useForm<schemaName>();
 
+  const generateID = (): string => {
+    return Math.random().toString(36).substring(2, 9);
+  };
 
+  const onSubmit = (data: any) => {
+    const userId = generateID();
+    localStorage.setItem(userId, data.userName);
+    console.log(data);
+    reset();
+
+  };
 
   return (
     <Flex
@@ -17,7 +29,6 @@ const FormSignUp = () => {
       h={"100%"}
       align={"end"}
       justify={"end"}
-      style={{ backdropFilter: "blur(3px)", borderRadius: 16 }}
     >
       <Flex justify={"center"} align={"center"} w={700} h={450}>
         <Flex
@@ -26,12 +37,19 @@ const FormSignUp = () => {
           direction={"column"}
           component="form"
           m={"1rem"}
+          onSubmit={handleSubmit(onSubmit)}
+          
         >
           <BackgroundImage
             p={26}
             w={"100%"}
             h={"100%"}
-            style={{ borderRadius: 16, display: "flex", justifyContent: "center", alignItems: "center" }}
+            style={{
+              borderRadius: 200,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
             src="https://i.pinimg.com/564x/db/b0/7e/dbb07e8f61ddb94f9b9a8980f5060bfe.jpg"
           >
             <Flex
@@ -49,10 +67,17 @@ const FormSignUp = () => {
                 w={"80%"}
                 c={"#000"}
                 fw={600}
+                styles={{
+                    label:{
+                        fontWeight: 600,
+                        fontSize: "1rem"
+                    }
+                }}
                 label={"Digita seu nome aê, merdinha"}
+                {...register("userName")}
               />
               <Button type="submit" bg={"#48DD1D"}>
-                Enviar
+              Enviar e abrir um portal!
               </Button>
             </Flex>
           </BackgroundImage>
