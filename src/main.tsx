@@ -4,6 +4,19 @@ import App from "./App.tsx";
 import "./index.css";
 import { MantineProvider, MantineThemeOverride } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
+import Redirect from "./components/redirect/index.tsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />
+  },
+  {
+    path: "redirect",
+    element: <Redirect />
+  }
+])
 
 const theme: MantineThemeOverride = {
   colors: {
@@ -68,7 +81,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <MantineProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <RouterProvider router={router} />
       </QueryClientProvider>
     </MantineProvider>
   </StrictMode>
