@@ -2,8 +2,8 @@ import { BackgroundImage, Flex } from "@mantine/core"
 
 const Redirect = () =>{
     return(
-        <Flex w={"100%"} h={"100%"}>
-            <BackgroundImage src="https://i.pinimg.com/originals/64/5c/8d/645c8d877f6e2aad7fa6545140c72a52.gif" />
+        <Flex maw={"100vw"} h={"100vh"} bg={"#000"} justify={"center"} >
+            <BackgroundImage w={700} src={"https://i.pinimg.com/originals/e4/6f/ce/e46fcec221220552783906a4ae2a8c3f.gif"} />
         </Flex>
     )
 }
