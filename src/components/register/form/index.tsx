@@ -27,10 +27,12 @@ const FormSignUp = () => {
   const { register, handleSubmit, reset, formState } = useForm<schemaName>({
     resolver: zodResolver(schemaName),
   });
+  
   const navigate = useNavigate();
 
   const onSubmit = (data: any) => {
-    localStorage.setItem("name", data.userName);
+    const userDates = JSON.stringify(data);
+    localStorage.setItem("userDate", userDates);
     console.log(data);
     reset();
     // navigate('/redirect');
