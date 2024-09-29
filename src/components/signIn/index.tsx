@@ -1,5 +1,7 @@
 import {
+  Anchor,
   BackgroundImage,
+  Button,
   Flex,
   Image,
   PasswordInput,
@@ -9,6 +11,7 @@ import style from "./index.module.css";
 import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
 const schemaSignIn = z.object({
   email: z.string().email({ message: "Insira um e-mail válido" }),
@@ -18,39 +21,74 @@ const schemaSignIn = z.object({
 type schemaSignIn = z.infer<typeof schemaSignIn>;
 
 const SignIn = () => {
-  const {} = useForm<schemaSignIn>({
+  const navigate = useNavigate();
+  const { register, formState, handleSubmit } = useForm<schemaSignIn>({
     resolver: zodResolver(schemaSignIn),
   });
 
+  const onSubimit = (userData: any) => {
+    const localStorangeData = localStorage.getItem("userDate");
+    if (localStorangeData) {
+      const objectUserData = JSON.parse(localStorangeData);
+
+      objectUserData.email === userData.email &&
+      objectUserData.password === userData.password
+        ? navigate("/home")
+        : alert("Usuário não cadastrado");
+    }
+  };
+
   return (
     <Flex mih={"100vh"} bg={"#000"} justify={"center"} align={"center"}>
-      <Flex classNames={style} p={"36 86"} h={650} style={{ borderRadius: 16 }}>
-        <BackgroundImage
-          src={
-            "https://i.pinimg.com/564x/f1/3a/36/f13a36c13395972ba8c69e59e66eba5a.jpg"
-          }
+      <Flex classNames={style} direction={"column"} align={"center"} p={"36"} w={600} style={{ borderRadius: 16, position: "relative", backdropFilter: "blur(2px)", zIndex: 2 }}>
+        <Image w={"80%"} src={"../../public/img/logo.png"} />
+        <Flex
+          component="form"
+          m={"0 auto"}
+          gap={16}
+          direction={"column"}
+          onSubmit={handleSubmit(onSubimit)}
+          style={{ zIndex: 0}}
+          p={8}
         >
-          <Image w={300} src={"../../public/img/logo.png"} />
-          <Flex w={300} m={"0 auto"} gap={16} direction={"column"}>
-            <TextInput
-              label={"Seu e-mail interdimencional"}
-              styles={{
-                label: {
-                  color: "#fff",
-                },
-              }}
-            />
-            <PasswordInput
-              label={"Sua senha"}
-              styles={{
-                label: {
-                  color: "#fff",
-                },
-              }}
-            />
+          <TextInput
+            label={"E-mail interdimencional"}
+            styles={{
+              label: {
+                color: "#05acc4",
+              },
+            }}
+            {...register("email")}
+            error={formState.errors.email?.message}
+          />
+          <PasswordInput
+            label={"Senha interdimencional"}
+            styles={{
+              label: {
+                color: "#05acc4",
+              },
+            }}
+            {...register("password")}
+            error={formState.errors.password?.message}
+          />
+          <Flex>
+            <Anchor c={"#05acc4"} fw={600} fz={12}>
+              Vai, preenche esse cadastro inútil... ou não, tanto faz.
+            </Anchor>
           </Flex>
-        </BackgroundImage>
+          <Button type="submit">Abrir Portal</Button>
+        </Flex>
+        <Flex justify={"center"}>
+        <Image
+          w={"30%"}
+        
+          src={
+            "../../public/img/rick-signIn.png"
+          }
+        />
+        </Flex>
       </Flex>
+        
     </Flex>
   );
 };

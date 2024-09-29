@@ -8,6 +8,7 @@ import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
 import Redirect from "./components/redirect/index.tsx";
 import TaksList from "./components/taskList/index.tsx";
 import SignIn from "./components/signIn/index.tsx";
+import Home from "./components/home/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "sign-in",
     element: <SignIn />
+  },
+  {
+    path: "home",
+    element: <Home />
   }
 ])
 
