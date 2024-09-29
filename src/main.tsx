@@ -9,6 +9,7 @@ import Redirect from "./components/redirect/index.tsx";
 import TaksList from "./components/taskList/index.tsx";
 import SignIn from "./components/signIn/index.tsx";
 import Home from "./components/home/index.tsx";
+import FormSignUp from "./components/register/form/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home />
+  },{
+    path: "register",
+    element: <FormSignUp />
   }
 ])
 

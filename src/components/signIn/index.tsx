@@ -72,7 +72,7 @@ const SignIn = () => {
             error={formState.errors.password?.message}
           />
           <Flex>
-            <Anchor c={"#05acc4"} fw={600} fz={12}>
+            <Anchor c={"#05acc4"} fw={600} fz={12} onClick={() => navigate("/")}>
               Vai, preenche esse cadastro inútil... ou não, tanto faz.
             </Anchor>
           </Flex>

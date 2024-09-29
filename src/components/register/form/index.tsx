@@ -35,7 +35,10 @@ const FormSignUp = () => {
     localStorage.setItem("userDate", userDates);
     console.log(data);
     reset();
-    // navigate('/redirect');
+    navigate("/redirect")
+    setTimeout(() => {
+      navigate("/sign-in")
+    }, 2000);
   };
 
   return (
