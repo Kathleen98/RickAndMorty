@@ -1,4 +1,13 @@
-import { BackgroundImage, Box, Flex, Grid, Image, ScrollArea, Text, Title } from "@mantine/core";
+import {
+  BackgroundImage,
+  Box,
+  Flex,
+  Grid,
+  Image,
+  ScrollArea,
+  Text,
+  Title,
+} from "@mantine/core";
 import NavBar from "../navBar";
 import Header from "../header";
 
@@ -13,14 +22,20 @@ const Home = () => {
       </Grid.Col>
       <Grid.Col
         span={10.2}
-        mah={"85vh"}
+        mah={"90vh"}
         style={{
           background:
             "linear-gradient(#4FB87D,#3FBE94, #34BC9D, #27B8A7, #19B6B4, #0AB2C1 )",
           borderRadius: 16,
         }}
       >
-        <Flex w={"100%"} h={"100%"} justify={"space-around"} align={"center"} direction={"column"}>
+        <Flex
+          w={"100%"}
+          h={"100%"}
+          justify={"space-around"}
+          align={"center"}
+          direction={"column"}
+        >
           <Flex
             w={"90%"}
             bg={"#121418"}
@@ -30,24 +45,121 @@ const Home = () => {
             <BackgroundImage
               w={"100%"}
               h={"100%"}
-              style={{ borderRadius: 16, position:"relative", display: "flex", justifyContent:"center", backgroundSize: "100% 300px" }}
+              style={{
+                borderRadius: 16,
+                position: "relative",
+                display: "flex",
+                justifyContent: "center",
+                backgroundSize: "100% 300px",
+              }}
               src={
                 "https://i.pinimg.com/originals/1b/3c/14/1b3c147a4b4e6125af7b21eff5216c3f.gif"
               }
-            >
-            </BackgroundImage>
+            ></BackgroundImage>
           </Flex>
-          <ScrollArea>
-            <Flex w={"100%"} bg={"#121418"} style={{borderRadius: 8}}>
-                <Title>Galeria</Title>
-                <Flex>
-                    <Box>
-                        <BackgroundImage src={""} />
-                    </Box>
-                </Flex>
+          <Flex w={"100%"} style={{ borderRadius: 8 }} direction={"column"}>
+            <Title pb={16} ta={"center"}>
+              Galeria
+            </Title>
+            <Flex w={"100%"} gap={"1rem"} justify={"center"}>
+              <Flex
+                direction={"column"}
+                justify={"center"}
+                align={"center"}
+                bg={"#121418"}
+                w={200}
+                h={250}
+                style={{ borderRadius: 8 }}
+              >
+                <BackgroundImage
+                  w={"68%"}
+                  h={"80%"}
+                  src={"../../public/img/morty.png"}
+                />
+                <Text fz={18} c={"#fff"} fw={600}>
+                  Morty
+                </Text>
+              </Flex>
+              <Flex
+                direction={"column"}
+                justify={"center"}
+                align={"center"}
+                bg={"#121418"}
+                w={200}
+                h={250}
+                style={{ borderRadius: 8 }}
+              >
+                <BackgroundImage
+                  w={"68%"}
+                  h={"80%"}
+                  src={"../../public/img/rick.png"}
+                />
+                <Text fz={18} c={"#fff"} fw={600}>
+                  Rick
+                </Text>
+              </Flex>
+              <Flex
+                direction={"column"}
+                justify={"center"}
+                align={"center"}
+                bg={"#121418"}
+                w={200}
+                h={250}
+                style={{ borderRadius: 8 }}
+              >
+                <BackgroundImage
+                  w={"68%"}
+                  h={"80%"}
+                  src={"../../public/img/summer.png"}
+                />
+                <Text fz={18} c={"#fff"} fw={600}>
+                  Summer
+                </Text>
+              </Flex>
+
+              <Flex
+                direction={"column"}
+                justify={"center"}
+                align={"center"}
+                bg={"#121418"}
+                w={200}
+                h={250}
+                style={{ borderRadius: 8 }}
+              >
+                <BackgroundImage
+                  w={"68%"}
+                  h={"80%"}
+                  src={"../../public/img/beth.png"}
+                />
+                <Text fz={18} c={"#fff"} fw={600}>
+                  Beth
+                </Text>
+              </Flex>
+              <Flex
+                direction={"column"}
+                justify={"center"}
+                align={"center"}
+                bg={"#121418"}
+                w={200}
+                h={250}
+                style={{ borderRadius: 8 }}
+              >
+                <BackgroundImage
+                  w={"68%"}
+                  h={"80%"}
+                  src={"../../public/img/jerry.png"}
+                />
+                <Text fz={18} c={"#fff"} fw={600}>
+                  Jerry
+                </Text>
+              </Flex>
             </Flex>
-          </ScrollArea>
+          </Flex>
+          <Flex>
+            <Title>To Do List</Title>
         </Flex>
+        </Flex>
+       
       </Grid.Col>
     </Grid>
   );
