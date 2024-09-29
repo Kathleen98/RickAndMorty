@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { MantineProvider, MantineThemeOverride } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Redirect from "./components/redirect/index.tsx";
 import TaksList from "./components/taskList/index.tsx";
 import SignIn from "./components/signIn/index.tsx";
@@ -78,7 +78,7 @@ const theme: MantineThemeOverride = {
   },
   components: {
     Button: {
-      styles: (theme: any) => ({
+      styles: () => ({
         root: {
           background: "#b2daed",
           color: "#000",

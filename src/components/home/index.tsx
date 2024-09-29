@@ -1,10 +1,7 @@
 import {
   BackgroundImage,
-  Box,
   Flex,
   Grid,
-  Image,
-  ScrollArea,
   Text,
   Title,
 } from "@mantine/core";

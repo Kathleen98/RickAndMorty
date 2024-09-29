@@ -1,6 +1,5 @@
 import {
   Anchor,
-  BackgroundImage,
   Button,
   Flex,
   Image,

@@ -1,4 +1,4 @@
-import { Container, Flex } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import "./App.css";
 import "@mantine/core/styles.css";
 import Register from "./components/register";
