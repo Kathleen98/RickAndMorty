@@ -6,6 +6,7 @@ import { MantineProvider, MantineThemeOverride } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
 import Redirect from "./components/redirect/index.tsx";
+import TaksList from "./components/taskList/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "redirect",
     element: <Redirect />
+  },
+  {
+    path: "toDoList",
+    element: <TaksList />
   }
 ])
 

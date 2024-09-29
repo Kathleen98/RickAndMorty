@@ -13,16 +13,12 @@ const FormSignUp = () => {
   const { register, handleSubmit, reset } = useForm<schemaName>();
   const navigate = useNavigate()
 
-  const generateID = (): string => {
-    return Math.random().toString(36).substring(2, 9);
-  };
 
   const onSubmit = (data: any) => {
-    const userId = generateID();
-    localStorage.setItem(userId, data.userName);
+    localStorage.setItem("name", data.userName);
     console.log(data);
     reset();
-    navigate('/redirect')
+    navigate('/redirect');
   };
 
   return (
