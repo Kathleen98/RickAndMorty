@@ -1,6 +1,7 @@
 import { BackgroundImage, Button, Flex, TextInput } from "@mantine/core";
 import z from "zod";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const schemaName = z.object({
   userName: z.string(),
@@ -10,6 +11,7 @@ type schemaName = z.infer<typeof schemaName>;
 
 const FormSignUp = () => {
   const { register, handleSubmit, reset } = useForm<schemaName>();
+  const navigate = useNavigate()
 
   const generateID = (): string => {
     return Math.random().toString(36).substring(2, 9);
@@ -20,7 +22,7 @@ const FormSignUp = () => {
     localStorage.setItem(userId, data.userName);
     console.log(data);
     reset();
-
+    navigate('/redirect')
   };
 
   return (
