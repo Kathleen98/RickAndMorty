@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
 import Redirect from "./components/redirect/index.tsx";
 import TaksList from "./components/taskList/index.tsx";
+import SignIn from "./components/signIn/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "toDoList",
     element: <TaksList />
+  },
+  {
+    path: "sign-in",
+    element: <SignIn />
   }
 ])
 
