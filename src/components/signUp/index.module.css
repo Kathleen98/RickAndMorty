@@ -1,0 +1,20 @@
+.root{
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    background-image: url("https://i.pinimg.com/564x/6f/3b/92/6f3b92b67a3cb0a51fcf84872c2f42c0.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0 ; 
+    background-color: #000000;
+}
+
+.root::before{
+    content: "";
+    position: absolute;
+    opacity: .8;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+

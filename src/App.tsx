@@ -1,7 +1,7 @@
 import { Flex } from "@mantine/core";
 import "./App.css";
 import "@mantine/core/styles.css";
-import Register from "./components/register";
+import Register from "./components/signUp";
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
       
       
         <Register />
-     
     </Flex>
   );
 }
