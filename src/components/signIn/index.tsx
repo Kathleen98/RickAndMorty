@@ -52,26 +52,20 @@ const SignIn = () => {
   };
 
   return (
-    <Flex
-      mih={"100vh"}
-      justify={"center"}
-      align={"center"}
-      classNames={style}
-    >
+    <Flex mih={"100vh"} justify={"center"} align={"center"} classNames={style}>
       <Flex
         direction={"column"}
         align={"center"}
-        p={48}
-        w={600}
+        p={"48px 0"}
         style={{
-          borderRadius: 230,
+          borderRadius: "3%",
           position: "relative",
           backdropFilter: "blur(15px)",
           zIndex: 2,
-          // background: "rgba(255, 255, 255, .5)"
+          background: "rgba(196, 215, 255, .1)",
         }}
       >
-        <Image w={"60%"} src={"../../public/img/logo.png"} />
+        <Image w={"50%"} src={"../../public/img/logo.png"} />
         <Flex
           component="form"
           m={"0 auto"}
