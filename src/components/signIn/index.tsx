@@ -52,21 +52,26 @@ const SignIn = () => {
   };
 
   return (
-    <Flex mih={"100vh"} bg={"#000"} justify={"center"} align={"center"}>
+    <Flex
+      mih={"100vh"}
+      justify={"center"}
+      align={"center"}
+      classNames={style}
+    >
       <Flex
-        classNames={style}
         direction={"column"}
         align={"center"}
-        p={"36"}
+        p={48}
         w={600}
         style={{
-          borderRadius: 16,
+          borderRadius: 230,
           position: "relative",
-          backdropFilter: "blur(2px)",
+          backdropFilter: "blur(15px)",
           zIndex: 2,
+          // background: "rgba(255, 255, 255, .5)"
         }}
       >
-        <Image w={"80%"} src={"../../public/img/logo.png"} />
+        <Image w={"60%"} src={"../../public/img/logo.png"} />
         <Flex
           component="form"
           m={"0 auto"}
@@ -107,9 +112,6 @@ const SignIn = () => {
             </Anchor>
           </Flex>
           <Button type="submit">Abrir Portal</Button>
-        </Flex>
-        <Flex justify={"center"}>
-          <Image w={"30%"} src={"../../public/img/rick-signIn.png"} />
         </Flex>
       </Flex>
     </Flex>
