@@ -1,21 +1,11 @@
 import { Flex } from "@mantine/core";
 import "./App.css";
 import "@mantine/core/styles.css";
-import Register from "./components/signUp";
+import SignIn from "./components/signIn";
 
 function App() {
-  return (
-    <Flex
-      w={"100vw"}
-      h={"100vh"}
-      style={{
-        background: "#fff",
-      }}
-    >
-      
-      
-        <Register />
-    </Flex>
+  return (      
+        <SignIn />
   );
 }
 
