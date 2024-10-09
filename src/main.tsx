@@ -9,6 +9,7 @@ import TaksList from "./components/taskList/index.tsx";
 import SignIn from "./components/signIn/index.tsx";
 import Home from "./components/home/index.tsx";
 import SignUp from "./components/signUp/index.tsx";
+import Timer from "./timer.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home />
+  },
+  {
+    path: "timer",
+    element: <Timer />
   }
 ])
 
