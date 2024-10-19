@@ -24,9 +24,9 @@ const Header = () => {
 
   return (
     <Flex bg="#121418" align={"center"} justify={"space-between"} p={"0 2rem"}>
-      <Image  onClick={() => navigate("/home")}  w={120} src={"../../public/img/logo.png"} style={{cursor: "pointer"}} />
+      <Image  onClick={() => navigate("/home")}  w={120} src={"https://github.com/Kathleen98/srcRickAndMory/issues/1#issue-2599461380"} style={{cursor: "pointer"}} />
       <Flex>
-        <Text c={"#fff"}>A porra da, {userName}!</Text>
+        <Text c={"#fff"}>Fala aê, {userName}!</Text>
       </Flex>
     </Flex>
   );

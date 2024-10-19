@@ -65,7 +65,7 @@ const SignIn = () => {
           background: "rgba(196, 215, 255, .1)",
         }}
       >
-        <Image w={"50%"} src={"../../public/img/logo.png"} />
+        <Image w={"50%"} src={"https://github.com/Kathleen98/srcRickAndMory/issues/1#issue-2599461380"} />
         <Flex
           component="form"
           m={"0 auto"}
