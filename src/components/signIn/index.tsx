@@ -65,7 +65,7 @@ const SignIn = () => {
           background: "rgba(196, 215, 255, .1)",
         }}
       >
-        <Image w={"50%"} src={"https://github.com/Kathleen98/srcRickAndMory/issues/1#issue-2599461380"} />
+        <Image w={"50%"} src={"https://private-user-images.githubusercontent.com/99849068/378114255-6ed2b274-2311-45f1-8b91-6de0bd466212.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjkzNjMzMzYsIm5iZiI6MTcyOTM2MzAzNiwicGF0aCI6Ii85OTg0OTA2OC8zNzgxMTQyNTUtNmVkMmIyNzQtMjMxMS00NWYxLThiOTEtNmRlMGJkNDY2MjEyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDE5VDE4MzcxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBmODEzOTlhMmQ1NGJmMjNhODllMWJhZThkNGJiNjNmZDc5OGRkNmZkMzQwNTM4OWRlMmNmYjk2YjU5Y2U2NjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.V9i0G41Q91Fuj9i0roVgihPlhs1OfqDaobBTxkgQ2vc"} />
         <Flex
           component="form"
           m={"0 auto"}
